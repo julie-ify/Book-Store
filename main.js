@@ -35,6 +35,16 @@ function addBookToList(book) {
   list.appendChild(listItem);
 }
 
+const form = document.querySelector('#form');
+form.addEventListener('submit', addNewBooks);
+function addNewBooks(e){
+    e.preventDefault();
+  const book = {
+    title: document.querySelector('#title').value,
+    author: document.querySelector('#author').value,
+  }
+  addBookToList(book);
+}
 displayBooks()
 // Add books to the UI
 
