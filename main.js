@@ -52,4 +52,14 @@ displayBooks()
 
 // remove book
 
+list.addEventListener('click', (e) => {
+  removeBook(e.target);
+});
+
+function removeBook(element){
+  if(element.classList.contains('remove')){
+    element.parentElement.remove();
+  }
+}
+
 // Add and remove books from the local storage
