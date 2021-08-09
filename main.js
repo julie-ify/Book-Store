@@ -39,6 +39,7 @@ function addNewBooks(e) {
 
     addBookToList(book);
     addBook(book);
+    initializeInput();
   }
 }
 
@@ -73,6 +74,11 @@ function addBook(book) {
   books.push(book);
 
   localStorage.setItem('books', JSON.stringify(books));
+}
+
+function initializeInput(){
+  title.value = '';
+  author.value = '';
 }
 
 // Remove book from local storage
