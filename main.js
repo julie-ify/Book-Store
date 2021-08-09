@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
       deleteBtn.className = 'removeBtn';
       const br = document.createElement('hr');
       list.appendChild(listItem);
-      listItem.appendChild(deleteatn);
+      listItem.appendChild(deleteBtn);
       listItem.appendChild(br);
       deleteBtn.addEventListener('click', () => {
         if (deleteBtn.id === bookItem.title) {
