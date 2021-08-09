@@ -23,6 +23,19 @@ function displayBooks() {
   
 }
 
+function addBookToList(book) {
+  const listItem = document.createElement('li');
+  listItem.innerHTML = `
+  <h5>${book.title}</h5>
+  <h5>${book.author}</h5>
+  <button class="remove">Remove</button>
+  <hr>
+  `
+
+  list.appendChild(listItem);
+}
+
+displayBooks()
 // Add books to the UI
 
 // Add new book
