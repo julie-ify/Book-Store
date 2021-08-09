@@ -1,12 +1,11 @@
 const list = document.getElementById('list');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
-const addButton = document.querySelector('.add-button')
-
+const addButton = document.querySelector('.add-button');
+const books = [];
 const bookList = (book) => {
   localStorage.setItem('books', JSON.stringify(book));
 };
-
 
 const addNewBook = (title, author) => {
   const addBooks = JSON.parse(localStorage.getItem('books'));
@@ -38,7 +37,6 @@ const addNewBook = (title, author) => {
     });
   } else { bookList(books); }
 };
-
 
 addButton.addEventListener('click', () => {
   addNewBook(title, author);
