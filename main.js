@@ -23,27 +23,29 @@ function addBookToList(book) {
   list.appendChild(listItem);
 }
 
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
 const form = document.querySelector('#form');
 form.addEventListener('submit', addNewBooks);
 function addNewBooks(e) {
   e.preventDefault();
-  const book = {
-    title: document.querySelector('#title').value,
-    author: document.querySelector('#author').value,
-  };
-  addBookToList(book);
-  addBook(book);
+  if (title.value === '' && author.value === '') {
+    return;
+  } else {
+    const book = {
+      title: document.querySelector('#title').value,
+      author: document.querySelector('#author').value,
+    };
+
+    addBookToList(book);
+    addBook(book);
+  }
 }
 
-// Add books to the UI
-
-// Add new book
-
 // remove book
-
 list.addEventListener('click', (e) => {
   removeBook(e.target);
-  remove(e.target.previousElementSibling.textContent)
+  remove(e.target.previousElementSibling.textContent);
 });
 
 function removeBook(element) {
@@ -52,9 +54,8 @@ function removeBook(element) {
   }
 }
 
-displayBooks()
+displayBooks();
 
-// Add and remove books from the local storage
 // get books from the local storage
 function getBooks() {
   let books;
@@ -66,6 +67,7 @@ function getBooks() {
   return books;
 }
 
+// Add books to local storage
 function addBook(book) {
   let books = getBooks();
   books.push(book);
@@ -73,6 +75,7 @@ function addBook(book) {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
+// Remove book from local storage
 function remove(author) {
   let books = getBooks();
   books.forEach((book, index) => {
@@ -83,8 +86,4 @@ function remove(author) {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-
-// Add book to the local storage
-// Remove from the local storage
-// localStorage.clear()
 console.log(localStorage);
