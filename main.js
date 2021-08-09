@@ -5,7 +5,7 @@ const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const form = document.querySelector('#form');
 
-// get books from the local storage
+// Get books from the local storage
 function getBooks() {
   let books;
   if (localStorage.getItem('books') === null) {
@@ -16,6 +16,7 @@ function getBooks() {
   return books;
 }
 
+// Add books to list item
 function addBookToList(book) {
   const listItem = document.createElement('li');
   listItem.innerHTML = `
@@ -28,6 +29,7 @@ function addBookToList(book) {
   list.appendChild(listItem);
 }
 
+// Clear input field after add a book to the UI
 function initializeInput() {
   title.value = '';
   author.value = '';
@@ -41,6 +43,7 @@ function addBook(book) {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
+// Add new books to the Book store
 function addNewBooks(e) {
   e.preventDefault();
   if (title.value === '' && author.value === '') {
@@ -56,7 +59,8 @@ function addNewBooks(e) {
   initializeInput();
 }
 
-// Initialise the book
+form.addEventListener('submit', addNewBooks);
+
 // display book on the UI
 function displayBooks() {
   const books = getBooks();
@@ -65,7 +69,6 @@ function displayBooks() {
   });
 }
 
-form.addEventListener('submit', addNewBooks);
 // Remove book from local storage
 function remove(author) {
   const books = getBooks();
@@ -77,13 +80,12 @@ function remove(author) {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
+// Remove book from the UI
 function removeBook(element) {
   if (element.classList.contains('remove')) {
     element.parentElement.remove();
   }
 }
-
-// remove book
 list.addEventListener('click', (e) => {
   removeBook(e.target);
   remove(e.target.previousElementSibling.textContent);
