@@ -16,7 +16,7 @@ This project is build with:
 
 ## LIVE DEMO;
 ---
-here is the live link: [Live Demo](https://isaka-lumato.github.io/portfolio/#)
+here is the live link: [Live Demo](https://julie-ify.github.io/Book-Store/)
 
 ## Getting Started;
 ---
@@ -24,8 +24,6 @@ here is the live link: [Live Demo](https://isaka-lumato.github.io/portfolio/#)
 To get the content of this project locally you need to run this command in your terminal:
 
 - ` git clone https://https://github.com/julie-ify/Book-Store.git`
-
-here is the live link: [Live Demo](https://julie-ify.github.io/Book-Store/)
 
 
 For tracking linter errors locally you need to follow these steps:
