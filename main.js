@@ -62,70 +62,36 @@ class UI {
   }
 };
 
-const addNewBook = (title, author) => {
-  const addBooks = JSON.parse(localStorage.getItem('books'));
-  if (addBooks !== null) {
-    addBooks.push({
-      title: title.value,
-      author: author.value
-    });
 
-    bookList(addBooks);
-    list.innerHTML = '';
-    addBooks.forEach((bookItem) => {
-      const listItem = document.createElement('li');
-      const deleteBtn = document.createElement('button');
-      deleteBtn.innerText = 'Remove';
-      listItem.innerHTML = `<h5>${bookItem.title}</h5>
-    <h5>${bookItem.author} </h5>`;
-      deleteBtn.id = bookItem.title;
+addButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const newBook = UI.createBook()
+    UI.saveBook(newBook);
+    UI.displayBook();
+    const books = UI.findBook();
+    if (books.length === 0) {
+      const book = UI.createBook()
+      const listItem = document.createElement('li')
+      listItem.innerHTML = `<h5>${book.title}</h5>
+    <h5>${book.author} </h5>`;
+      deleteBtn.id = book.title;
       deleteBtn.className = 'removeBtn';
       const br = document.createElement('hr');
       list.appendChild(listItem);
       listItem.appendChild(deleteBtn);
       listItem.appendChild(br);
       deleteBtn.addEventListener('click', () => {
-        if (deleteBtn.id === bookItem.title) {
+        if (deleteBtn.id === book.title) {
           const index = addBooks.findIndex((rBook) => rBook.title === deleteBtn.id);
           addBooks.splice(index, 1);
           list.removeChild(listItem);
-          bookList(addBooks);
+          localStorage.setItem('books', JSON.stringify(books));
         }
       });
-    });
-  } else {
-    bookList(books);
-  }
-};
+      UI.saveBook(book);
+    }
+})
 
-addButton.addEventListener('click', () => {
-  addNewBook(title, author);
-});
-
-// Add books to list item
-window.addEventListener('load', () => {
-  const addBooks = JSON.parse(localStorage.getItem('books'));
-  if (addBooks !== null) {
-    addBooks.forEach((bookItem) => {
-      const listItem = document.createElement('li');
-      const deleteBtn = document.createElement('button');
-      deleteBtn.innerText = 'Remove';
-      listItem.innerHTML = `<h5>${bookItem.title}</h5>
-    <h5>${bookItem.author} </h5>`;
-      deleteBtn.id = bookItem.title;
-      deleteBtn.className = 'removeBtn';
-      const br = document.createElement('hr');
-      list.appendChild(listItem);
-      listItem.appendChild(deleteBtn);
-      listItem.appendChild(br);
-      deleteBtn.addEventListener('click', () => {
-        if (deleteBtn.id === bookItem.title) {
-          const index = addBooks.findIndex((rBook) => rBook.title === deleteBtn.id);
-          addBooks.splice(index, 1);
-          list.removeChild(listItem);
-          bookList(addBooks);
-        }
-      });
-    });
-  }
-});
+window.onload = () => {
+  UI.displayBook();
+}
