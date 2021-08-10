@@ -60,3 +60,35 @@ class UI {
     UI.clearField();
   }
 };
+addButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const newBook = UI.createBook()
+    UI.saveBook(newBook);
+    UI.displayBook();
+    const books = UI.findBook();
+    if (books.length === 0) {
+      const book = UI.createBook()
+      const listItem = document.createElement('li')
+      listItem.innerHTML = `<h5>${book.title}</h5>
+    <h5>${book.author} </h5>`;
+      deleteBtn.id = book.title;
+      deleteBtn.className = 'removeBtn';
+      const br = document.createElement('hr');
+      list.appendChild(listItem);
+      listItem.appendChild(deleteBtn);
+      listItem.appendChild(br);
+      deleteBtn.addEventListener('click', () => {
+        if (deleteBtn.id === book.title) {
+          const index = addBooks.findIndex((rBook) => rBook.title === deleteBtn.id);
+          addBooks.splice(index, 1);
+          list.removeChild(listItem);
+          localStorage.setItem('books', JSON.stringify(books));
+        }
+      });
+      UI.saveBook(book);
+    }
+})
+
+window.onload = () => {
+  UI.displayBook();
+}
