@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 const list = document.getElementById('list');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
@@ -12,7 +13,7 @@ class Book {
 
 class UI {
   static createBook() {
-    return new Book(title.value, author.value)
+    return new Book(title.value, author.value);
   }
 
   static saveBook(newBook) {
@@ -20,7 +21,7 @@ class UI {
     if (books === null) {
       localStorage.setItem('books', JSON.stringify([]));
     } else {
-      books.push(newBook)
+      books.push(newBook);
       localStorage.setItem('books', JSON.stringify(books));
     }
   }
@@ -28,6 +29,7 @@ class UI {
   static findBook() {
     return JSON.parse(localStorage.getItem('books'));
   }
+
   static clearField() {
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
@@ -59,16 +61,19 @@ class UI {
     });
     UI.clearField();
   }
-};
+}
 addButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const newBook = UI.createBook()
+  e.preventDefault();
+  if (document.getElementById('title').value === '' && document.getElementById('author').value === '') {
+    return;
+  } else {
+    const newBook = UI.createBook();
     UI.saveBook(newBook);
     UI.displayBook();
     const books = UI.findBook();
     if (books.length === 0) {
-      const book = UI.createBook()
-      const listItem = document.createElement('li')
+      const book = UI.createBook();
+      const listItem = document.createElement('li');
       listItem.innerHTML = `<h5>${book.title}</h5>
     <h5>${book.author} </h5>`;
       deleteBtn.id = book.title;
@@ -87,8 +92,9 @@ addButton.addEventListener('click', (e) => {
       });
       UI.saveBook(book);
     }
-})
+  }
+});
 
 window.onload = () => {
   UI.displayBook();
-}
+};
