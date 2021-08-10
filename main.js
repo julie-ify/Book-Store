@@ -65,7 +65,7 @@ class UI {
 addButton.addEventListener('click', (e) => {
   e.preventDefault();
   if (document.getElementById('title').value === '' && document.getElementById('author').value === '') {
-    return;
+
   } else {
     const newBook = UI.createBook();
     UI.saveBook(newBook);
