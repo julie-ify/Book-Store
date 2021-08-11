@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <title>Book Store</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <title>Book Store</title>
-</head>
+  <body>
+    <main>
+      <section id="book-section">
+        <h1>Awesome books</h1>
+        <table class="table table-striped"></table>
+      </section>
+      <section id="form-section">
+        <form id="form">
+          <input type="text" placeholder="Title" id="title" />
+          <input type="text" placeholder="Author" id="author" />
+          <button type="submit" class="add-button">Add</button>
+        </form>
+      </section>
+    </main>
 
-<body>
-  <main>
-    <h1>Awesome books</h1>
-    <table class="table table-striped">
-
-    </table>
-    <section id="form-section">
-      <form id="form">
-        <input type="text" placeholder="Title" id="title" />
-        <input type="text" placeholder="Author" id="author" />
-        <button type="submit" class="add-button">Add</button>
-      </form>
-    </section>
-  </main>
-
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
