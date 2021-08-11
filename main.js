@@ -1,8 +1,14 @@
 /* eslint-disable max-classes-per-file */
-const list = document.getElementById('list');
+const table = document.getElementsByTagName('table')[0];
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const addButton = document.querySelector('.add-button');
+
+const tHead = document.createElement('thead');
+const tRow = document.createElement('tr');
+tRow.innerHTML = `<th>Book Title</th> <th>Book author</th> <th></th>`;
+tHead.appendChild(tRow);
+table.appendChild(tHead);
 
 class Book {
   constructor(title, author) {
