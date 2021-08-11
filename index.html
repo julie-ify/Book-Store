@@ -19,9 +19,21 @@
     <main>
       <section id="book-section">
         <h1>Awesome books</h1>
-        <table class="table table-striped"></table>
+        <table class="table table-striped border-end border-start" id="table">
+          <thead>
+            <tr>
+              <th> Book Title</th>
+              <th> Book Author</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="list">
+            
+          </tbody>
+        </table>
       </section>
       <section id="form-section">
+        <h2>Add a new book</h2>
         <form id="form">
           <input type="text" placeholder="Title" id="title" />
           <input type="text" placeholder="Author" id="author" />
