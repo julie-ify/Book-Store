@@ -4,21 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Book Store</title>
   </head>
 
   <body>
     <main>
       <section id="book-section">
-        <h1>Awesome books</h1>
+        <h1 class="mb-4 text-center">Awesome books</h1>
         <table class="table table-striped border-end border-start" id="table">
           <thead>
             <tr>
@@ -33,11 +32,11 @@
         </table>
       </section>
       <section id="form-section">
-        <h2>Add a new book</h2>
-        <form id="form">
-          <input type="text" placeholder="Title" id="title" />
-          <input type="text" placeholder="Author" id="author" />
-          <button type="submit" class="add-button">Add</button>
+        <h2 class="mb-4 text-center">Add a new book</h2>
+        <form id="form" class="d-flex flex-column gap-2">
+          <input type="text" placeholder="Title" id="title" class="p-2" />
+          <input type="text" placeholder="Author" id="author"  class="p-2" />
+          <button type="submit" class="add-button btn btn-light px-4">Add</button>
         </form>
       </section>
     </main>

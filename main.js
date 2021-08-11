@@ -49,7 +49,7 @@ class UI {
       list.appendChild(listItem);
       tdata.className = 'd-flex justify-content-end';
       deleteBtn.id = bookItem.title;
-      deleteBtn.className = 'removeBtn';
+      deleteBtn.className = 'removeBtn btn btn-light  px-4';
       tdata.appendChild(deleteBtn);
       deleteBtn.addEventListener('click', () => {
         if (deleteBtn.id === bookItem.title) {

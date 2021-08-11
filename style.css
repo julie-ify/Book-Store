@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
 body {
   text-align: left;
 }
@@ -9,5 +15,21 @@ main {
 #book-section,
 #form-section {
   width: 60%;
-  margin: 3rem auto;
+  margin: 3rem auto 10rem;
+}
+
+.add-button {
+  display: inline;
+  width: fit-content;
+  background: #222;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.removeBtn {
+  display: inline;
+  width: fit-content;
+  background: #222;
+  color: #fff;
+  align-self: flex-end;
 }
