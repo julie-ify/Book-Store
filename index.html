@@ -16,31 +16,69 @@
 
   <body>
     <main>
-      <section id="book-section">
-        <h1 class="mb-4 text-center">Awesome books</h1>
+      <header id="header">
+        <nav class="nav-bar">
+          <a class="brand" href="index.html">Awesome Books</a>
+          <ul class="nav-list">
+            <li class="item item1 current"><a href="#">List</a></li>
+            <li class="item item2"><a href="#">New</a></li>
+            <li class="item item3"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="time d-flex justify-content-end pe-5"></div>
+      <section id="book-section" class="my-5 sec1">
+        <h1 class="mb-4 text-center">
+          Awesome <span class="color">books</span>
+        </h1>
         <table class="table table-striped border-end border-start" id="table">
           <thead>
             <tr>
-              <th> Book Title</th>
-              <th> Book Author</th>
+              <th>Book Title</th>
+              <th>Book Author</th>
               <th></th>
             </tr>
           </thead>
-          <tbody id="list">
-            
-          </tbody>
+          <tbody id="list"></tbody>
         </table>
       </section>
-      <section id="form-section">
-        <h2 class="mb-4 text-center">Add a new book</h2>
+      <section id="form-section" class="my-5 sec2 d-none">
+        <h1 class="mb-4 text-center">
+          Add a new <span class="color">book</span>
+        </h1>
         <form id="form" class="d-flex flex-column gap-2">
           <input type="text" placeholder="Title" id="title" class="p-2" />
-          <input type="text" placeholder="Author" id="author"  class="p-2" />
-          <button type="submit" class="add-button btn btn-light px-4">Add</button>
+          <input type="text" placeholder="Author" id="author" class="p-2" />
+          <button type="submit" class="add-button btn btn-light px-4">
+            Add
+          </button>
         </form>
       </section>
+      <section id="contact-section" class="my-5 sec3 d-none">
+        <div class="contact-info">
+          <h1 class="mb-4 text-center">Contact Information</h1>
+          <p class="lead">
+            Do you have any question or you just want to say "Hello" <br />
+            You can reach out to us!
+          </p>
+          <ul class="contact-list">
+            <li>
+              Our e-mail:
+              <a class="mail" href="mailto:julieifionu@gmail.com">Email</a>
+            </li>
+            <li>Our phone number: 00324582383</li>
+            <li>Our address: Streetname 22, 54820 City, Country</li>
+          </ul>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="footer">Made with ❤ copyright &copy; 2021</div>
+    </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
+    <script src="nav.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
