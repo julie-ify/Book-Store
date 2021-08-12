@@ -16,29 +16,54 @@
 
   <body>
     <main>
+      <header id="contact-section">
+        <nav class="navbar">
+          <a href="index.html">Awesome Books</a>
+          <ul class="nav-list">
+            <li class="item current"><a href="#">List</a></li>
+            <li class="item"><a href="#">Add New</a></li>
+            <li class="item"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
       <section id="book-section">
         <h1 class="mb-4 text-center">Awesome books</h1>
         <table class="table table-striped border-end border-start" id="table">
           <thead>
             <tr>
-              <th> Book Title</th>
-              <th> Book Author</th>
+              <th>Book Title</th>
+              <th>Book Author</th>
               <th></th>
             </tr>
           </thead>
-          <tbody id="list">
-            
-          </tbody>
+          <tbody id="list"></tbody>
         </table>
       </section>
       <section id="form-section">
-        <h2 class="mb-4 text-center">Add a new book</h2>
+        <h1 class="mb-4 text-center">Add a new book</h1>
         <form id="form" class="d-flex flex-column gap-2">
           <input type="text" placeholder="Title" id="title" class="p-2" />
-          <input type="text" placeholder="Author" id="author"  class="p-2" />
-          <button type="submit" class="add-button btn btn-light px-4">Add</button>
+          <input type="text" placeholder="Author" id="author" class="p-2" />
+          <button type="submit" class="add-button btn btn-light px-4">
+            Add
+          </button>
         </form>
       </section>
+      <section id="contact-section">
+        <div class="contact-info">
+          <h1 class="mb-4 text-center">Contact Information</h1>
+          <p class="lead">
+            Do you have any question or you just want to say "Hello" <br />
+            You can reach out to us!
+          </p>
+          <ul class="contact-list">
+            <li>Our e-mail: mail@gmail.com</li>
+            <li>Our phone number: 00324582383</li>
+            <li>Our address: Streetname 22, 54820 City, Country</li>
+          </ul>
+        </div>
+      </section>
+      <footer>Made with ❤ copyright &copy; 2021</footer>
     </main>
 
     <script src="main.js"></script>
