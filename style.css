@@ -4,8 +4,10 @@
   padding: 0;
 }
 
-main {
-  height: 100%;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header a {
@@ -105,7 +107,6 @@ ul.nav-list {
 
 footer {
   background-color: #ddd;
-  height: 10vh;
   margin-top: auto;
 }
 
