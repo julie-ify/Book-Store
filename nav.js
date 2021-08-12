@@ -29,3 +29,13 @@ contBut.addEventListener('click', () => {
   listBut.classList.remove('current');
   contBut.classList.add('current');
 });
+
+
+
+var DateTime = luxon.DateTime;
+const now = DateTime.now().toFormat('LLL dd yyyy tttt');
+
+const time = document.querySelector('.time');
+time.innerHTML = `${now}`;
+time.style.fontSize = '13px'
+// console.log(now)
