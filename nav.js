@@ -30,12 +30,11 @@ contBut.addEventListener('click', () => {
   contBut.classList.add('current');
 });
 
-
-
-var DateTime = luxon.DateTime;
+/* eslint-disable */
+const DateTime = luxon.DateTime;
+/* eslint-disable */
 const now = DateTime.now().toFormat('LLL dd yyyy tttt');
 
 const time = document.querySelector('.time');
 time.innerHTML = `${now}`;
-time.style.fontSize = '13px'
-// console.log(now)
+time.style.fontSize = '13px';
