@@ -4,18 +4,64 @@
   padding: 0;
 }
 
-body {
-  text-align: left;
+main {
+  height: 100%;
 }
 
-main {
-  width: 100%;
+header a {
+  text-decoration: none;
+  color: #222;
+}
+
+ul {
+  list-style: none;
+}
+
+.color {
+  color: lightskyblue;
+}
+
+.current a {
+  color: rgb(12, 155, 243);
+}
+
+header a:hover {
+  color: rgb(12, 155, 243);
+}
+
+header {
+  border-bottom: 2px solid #222;
+  background-color: #ddd;
+}
+
+.brand {
+  font-size: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 2rem 0;
+}
+
+ul.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  margin-right: 1rem;
+  padding: 0 1rem;
+  border-right: 2px solid #222;
 }
 
 #book-section,
-#form-section {
-  width: 60%;
-  margin: 3rem auto 10rem;
+#form-section,
+#contact-section {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .add-button {
@@ -32,4 +78,38 @@ main {
   background: #222;
   color: #fff;
   align-self: flex-end;
+}
+
+/* Contact */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.mail {
+  color: lightskyblue;
+}
+
+.mail:hover {
+  color: #222;
+}
+
+/* footer */
+
+footer {
+  background-color: #ddd;
+  height: 10vh;
+  margin-top: auto;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
 }
