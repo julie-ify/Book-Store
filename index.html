@@ -26,12 +26,12 @@
           </ul>
         </nav>
       </header>
-      <div class="time d-flex justify-content-end pe-5"></div>
+      <div class="time d-flex justify-content-end pe-5 mt-3"></div>
       <section id="book-section" class="my-5 sec1">
         <h1 class="mb-4 text-center">
           Awesome <span class="color">books</span>
         </h1>
-        <table class="table table-striped border-end border-start" id="table">
+        <table class="table table-bordered book-table" id="table">
           <thead>
             <tr>
               <th>Book Title</th>
@@ -47,8 +47,8 @@
           Add a new <span class="color">book</span>
         </h1>
         <form id="form" class="d-flex flex-column gap-2">
-          <input type="text" placeholder="Title" id="title" class="p-2" />
-          <input type="text" placeholder="Author" id="author" class="p-2" />
+          <input type="text" placeholder="Title" id="title" class="p-2 textbox" />
+          <input type="text" placeholder="Author" id="author" class="p-2 textbox" />
           <button type="submit" class="add-button btn btn-light px-4">
             Add
           </button>

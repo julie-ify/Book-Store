@@ -1,17 +1,22 @@
-###  Portfolio
+###  Book-store
 ---
 Assigment from Microverse: Awesome Books store;
 ![awesomeBooks](https://user-images.githubusercontent.com/75973193/128710198-99b14fb4-0403-46d4-88de-24e82641b1ee.png)
 
+![screenshot](./images/table.png)
+
+
+![screenshot](./images/input.png)
 
 ## Description
 
-- Created a book-store that can add new books, remove books, store and remove books from the local storage
+- This project is about a book-store where user can store the title and author of thier favourite books, and can also remove books, 
 
 ## Built With
 
 This project is build with:
 - HTML
+- CSS
 - JAVASCRIPT
 
 ## LIVE DEMO;

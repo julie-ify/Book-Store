@@ -8,43 +8,48 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: rgb(12, 177, 122);
 }
 
 header a {
   text-decoration: none;
-  color: #222;
+  color: #f2f2f2;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .color {
-  color: lightskyblue;
+  color: #f2f2f2;
 }
 
 .current a {
-  color: rgb(12, 155, 243);
+  color: rgb(12, 177, 122);
 }
 
 header a:hover {
-  color: rgb(12, 155, 243);
+  color: rgb(12, 177, 122);
 }
 
 header {
   border-bottom: 2px solid #222;
-  background-color: #ddd;
+  background-color: #222;
+  font-weight: 600;
 }
 
 .brand {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .nav-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem 2rem 0;
+  padding: 1rem 2rem;
+  align-items: center;
 }
 
 ul.nav-list {
@@ -56,30 +61,53 @@ ul.nav-list {
 .item {
   margin-right: 1rem;
   padding: 0 1rem;
-  border-right: 2px solid #222;
+  border-right: 2px solid rgb(12, 177, 122);
 }
 
 #book-section,
 #form-section,
 #contact-section {
   width: 70%;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .add-button {
   display: inline;
   width: fit-content;
-  background: #222;
+  background-color: rgb(5, 116, 79);
   color: #fff;
   align-self: flex-end;
+  border: none;
+  margin-top: 1rem;
+  font-weight: 600;
+  box-shadow: 2px 2px 5px #f2f2f2;
 }
 
 .removeBtn {
   display: inline;
   width: fit-content;
-  background: #222;
+  background: rgb(201, 7, 7);
   color: #fff;
   align-self: flex-end;
+  border: none;
+}
+
+.textbox {
+  background-color: #f2f2f2;
+  border: none;
+  box-shadow: 2px 2px 5px #444;
+}
+
+.textbox:focus {
+  border: 2px solid rgb(60, 252, 188);
+  outline: none;
+  box-shadow: 2px 2px 5px #444;
+}
+
+.book-table {
+  background-color: rgb(12, 196, 134);
+  font-weight: 600;
 }
 
 /* Contact */
@@ -89,6 +117,7 @@ ul.nav-list {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-weight: 600;
 }
 
 .lead {
@@ -96,21 +125,22 @@ ul.nav-list {
 }
 
 .mail {
-  color: lightskyblue;
+  color: #f2f2f2;
 }
 
 .mail:hover {
-  color: #222;
+  color: rgb(180, 12, 12);
 }
 
 /* footer */
 
 footer {
-  background-color: #ddd;
+  background-color: #222;
   margin-top: auto;
 }
 
 .footer {
   padding: 1rem;
   text-align: center;
+  color: #f2f2f2;
 }
