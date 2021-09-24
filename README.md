@@ -1,7 +1,6 @@
 ###  Book-store
 ---
 Assigment from Microverse: Awesome Books store;
-![awesomeBooks](https://user-images.githubusercontent.com/75973193/128710198-99b14fb4-0403-46d4-88de-24e82641b1ee.png)
 
 ![screenshot](./images/table.png)
 
