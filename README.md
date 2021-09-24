@@ -18,12 +18,9 @@ This project is build with:
 - CSS
 - JAVASCRIPT
 
-## LIVE DEMO;
----
 here is the live link: [Live Demo](https://julie-ify.github.io/Book-Store/)
 
 ## Getting Started;
----
 
 To get the content of this project locally you need to run this command in your terminal:
 

@@ -3,6 +3,8 @@ const list = document.getElementById('list');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const addButton = document.querySelector('.add-button');
+const secOne = document.querySelector('.sec1');
+const secTwo = document.querySelector('.sec2');
 
 class Book {
   constructor(title, author) {
@@ -68,6 +70,8 @@ addButton.addEventListener('click', (e) => {
   if (document.getElementById('title').value === '' && document.getElementById('author').value === '') {
     return;
   }
+  secTwo.classList.add('d-none');
+  secOne.classList.remove('d-none');
   const newBook = UI.createBook();
   UI.saveBook(newBook);
   UI.displayBook();
