@@ -38,3 +38,4 @@ const now = DateTime.now().toFormat('LLL dd yyyy tttt');
 const time = document.querySelector('.time');
 time.innerHTML = `${now}`;
 time.style.fontSize = '13px';
+time.style.fontWeight = '600';
